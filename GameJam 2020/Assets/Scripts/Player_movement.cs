@@ -12,6 +12,7 @@ public class Player_movement : MonoBehaviour
     private bool facingRight = true;
 
     public Rigidbody2D rb;
+    public Animator anim;
 
 
     // Start is called before the first frame update
@@ -26,6 +27,7 @@ public class Player_movement : MonoBehaviour
         movement_X = Input.GetAxisRaw("Horizontal");
         movement_Y = 0;
         movement = new Vector2(movement_X, movement_Y);
+        anim.SetFloat("speed", Mathf.Abs(movement_X));
     }
 
     private void FixedUpdate()
