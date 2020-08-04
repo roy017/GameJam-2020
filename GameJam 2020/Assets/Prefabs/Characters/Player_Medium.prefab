@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 978dd566f6d21ac4d846b20018f0b5ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 8
   Total_Jumps: 1
   jumpForce: 20
   rb: {fileID: 8182385895408513209}
@@ -137,7 +137,7 @@ MonoBehaviour:
   groundCheck: {fileID: 1568297455}
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 768
 --- !u!50 &8182385895408513209
 Rigidbody2D:
   serializedVersion: 4
@@ -191,7 +191,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.28}
+  m_Offset: {x: -0.0026733577, y: 0.2803607}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.485, y: 0.0625}
@@ -202,5 +202,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.55, y: 0.56}
-  m_EdgeRadius: 0
+  m_Size: {x: 0.43304884, y: 0.46379805}
+  m_EdgeRadius: 0.1
