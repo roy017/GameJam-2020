@@ -21,13 +21,17 @@ public class Player_movement_Medium : MonoBehaviour
     private float groundCheckRadius= 0.2f;
     public LayerMask whatIsGround;
 
-    int cur_jumps = 0;
+    public int cur_jumps = 0;
     private bool launched;
+
+    public GameObject Smoke;
 
     // Start is called before the first frame update
     void Start()
     {
         cur_jumps = Total_Jumps;
+        //Smoke = GameObject.Find("Exhaust_Fume");
+        Smoke.SetActive(false);
     }
 
     // Update is called once per frame
@@ -82,7 +86,20 @@ public class Player_movement_Medium : MonoBehaviour
 
     public void Jump()
     {
+        //smoke();
         Vector3 up = transform.TransformDirection(Vector3.up);
+        float x = rb.velocity.x;
+        float y = rb.velocity.y;
+        rb.velocity = new Vector2(x, 0f);
         rb.AddForce(up * jumpForce, ForceMode2D.Impulse);
+        
     }
+    /*
+    IEnumerator smoke()
+    {
+        Smoke.SetActive(true);
+        yield return new WaitForSeconds(2);
+        Smoke.SetActive(false);
+    }
+    */
 }
