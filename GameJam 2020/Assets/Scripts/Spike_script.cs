@@ -7,20 +7,17 @@ public class Spike_script : MonoBehaviour
     [SerializeField]
     private GameObject Cur_PLayer;
     public Manager_script manager;
-    // Start is called before the first frame update
-    void Start()
-    {
-        Cur_PLayer = GameObject.Find("Player");
-        if(Cur_PLayer == null)
-        {
-            Cur_PLayer = GameObject.Find("Player(Clone)");
-        }
-    }
+    public Char_swap CS;
 
+    private void Start()
+    {
+        //manager = GetComponent<Manager_script>();
+    }
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Cur_PLayer = GameObject.Find("Player");
+        CS = Cur_PLayer.GetComponent<Char_swap>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
