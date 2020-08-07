@@ -4905,6 +4905,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0189cf8fe3e651d46a23600f8698079d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player_Small: {fileID: 1392338646638496359, guid: 9c00e690db24e854eb94ff8cceefc626, type: 3}
+  Player_Medium: {fileID: 8182385895408513215, guid: 5219f62bec36b6e48abf3f6cfe2c8f80, type: 3}
+  Player_Large: {fileID: 3639899046612015375, guid: e7c081b234bc58a4c93a41a73ccf103b, type: 3}
+  Camera_pos: {fileID: 6780600835211026300}
+  Player_Select: 0
+  cur_Pos: {x: 0, y: 0, z: 0}
+  PM_Script_S: {fileID: 1392338646638496356, guid: 9c00e690db24e854eb94ff8cceefc626, type: 3}
   PM_Script_M: {fileID: 3428404894210793541}
   PM_Script_L: {fileID: 6780600834075043028}
 --- !u!1001 &6780600834125310997
@@ -4965,6 +4972,10 @@ PrefabInstance:
     - target: {fileID: 1392338646638496357, guid: 9c00e690db24e854eb94ff8cceefc626, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1392338646638496358, guid: 9c00e690db24e854eb94ff8cceefc626, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1392338646638496359, guid: 9c00e690db24e854eb94ff8cceefc626, type: 3}
       propertyPath: m_Name
@@ -5032,6 +5043,10 @@ PrefabInstance:
       propertyPath: Smoke
       value: 
       objectReference: {fileID: 1909106556}
+    - target: {fileID: 8182385895408513211, guid: 5219f62bec36b6e48abf3f6cfe2c8f80, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8182385895408513215, guid: 5219f62bec36b6e48abf3f6cfe2c8f80, type: 3}
       propertyPath: m_Name
       value: Player_Medium
@@ -5061,6 +5076,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6780600835716332397}
     m_Modifications:
+    - target: {fileID: 3639899046612015368, guid: e7c081b234bc58a4c93a41a73ccf103b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3639899046612015371, guid: e7c081b234bc58a4c93a41a73ccf103b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

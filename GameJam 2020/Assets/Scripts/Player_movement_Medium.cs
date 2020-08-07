@@ -26,7 +26,7 @@ public class Player_movement_Medium : MonoBehaviour
 
     public GameObject Smoke;
 
-    public Sprite test;
+    //public Sprite test;
 
     // Start is called before the first frame update
     void Start()

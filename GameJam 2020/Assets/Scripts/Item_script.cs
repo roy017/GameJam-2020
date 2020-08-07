@@ -8,15 +8,13 @@ public class Item_script : MonoBehaviour
     public Char_swap CS;
     private Vector3 Player_Pos;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+        GameObject p = GameObject.Find("Player");
+        CS = p.GetComponent<Char_swap>();
         Player_Pos = CS.cur_Pos;
     }
 

@@ -37,20 +37,24 @@ public class Char_swap : MonoBehaviour
                 Player_Select = 3;
                 Player_Large.transform.position = Player_Pos;
                 Player_Large.transform.rotation = Player_Rot;
+
                 PM_Script_L.cur_jumps = 2;
             }
                 
             else if (Player_Select == 2)
             {
                 Player_Select = 1;
+
                 Player_Small.transform.position = Player_Pos;
                 Player_Small.transform.rotation = Player_Rot;
+
             }
             else if (Player_Select == 3)
             {
                 Player_Select = 2;
                 Player_Medium.transform.position = Player_Pos;
                 Player_Medium.transform.rotation = Player_Rot;
+
                 PM_Script_M.cur_jumps = 1;
 
             }
