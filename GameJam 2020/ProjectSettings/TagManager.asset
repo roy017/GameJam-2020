@@ -16,8 +16,8 @@ TagManager:
   - Ground
   - Platform
   - Player
-  - 
-  - 
+  - Item_Rocket
+  - Item_Helmet
   - 
   - 
   - 
@@ -43,4 +43,10 @@ TagManager:
     locked: 0
   - name: Platforms
     uniqueID: 1023759397
+    locked: 0
+  - name: Item_Rocket
+    uniqueID: 2543170927
+    locked: 0
+  - name: Item_Helmet
+    uniqueID: 2885867579
     locked: 0

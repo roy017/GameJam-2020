@@ -15,6 +15,7 @@ public class Player_movement : MonoBehaviour
     public Animator anim;
 
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -50,4 +51,5 @@ public class Player_movement : MonoBehaviour
         scaler.x *= -1;
         transform.localScale = scaler;
     }
+    
 }
