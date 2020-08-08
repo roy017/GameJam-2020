@@ -114,3 +114,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isRocket: 0
   CS: {fileID: 0}
+  manager: {fileID: 0}

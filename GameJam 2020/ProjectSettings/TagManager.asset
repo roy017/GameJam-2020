@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - TeleportTo
+  - Item
+  - ItemDetector
   layers:
   - Default
   - TransparentFX

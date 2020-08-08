@@ -91,18 +91,11 @@ public class Player_movement_Medium : MonoBehaviour
         //smoke();
         Vector3 up = transform.TransformDirection(Vector3.up);
         float x = rb.velocity.x;
-        float y = rb.velocity.y;
+        //float y = rb.velocity.y;
         rb.velocity = new Vector2(x, 0f);
         rb.AddForce(up * jumpForce, ForceMode2D.Impulse);
         
     }
-    /*
-    IEnumerator smoke()
-    {
-        Smoke.SetActive(true);
-        yield return new WaitForSeconds(2);
-        Smoke.SetActive(false);
-    }
-    */
+
     
 }
