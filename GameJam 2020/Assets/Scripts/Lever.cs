@@ -10,6 +10,7 @@ public class Lever : MonoBehaviour
     private bool hasTriggered = false;
 
     public bool isRewindable;
+    private bool canActivate;
 
     public Sprite Left;
     public Sprite Right;
@@ -18,12 +19,13 @@ public class Lever : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        canActivate = false;
         isOpened = new bool[doors.Length];
+
         for(int i = 0; i < doors.Length; i++)
         {
             isOpened[i] = !doors[i].GetComponent<Door>().initialState;
             doors[i].SetActive(!isOpened[i]);
-            Debug.Log(isOpened[i]);
         }
         Sprite_cur = Left;
         this.GetComponent<SpriteRenderer>().sprite = Sprite_cur;
@@ -31,13 +33,33 @@ public class Lever : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        hasTriggered = true;
-        Activate();
-    } 
+        // hasTriggered = true;
+        // Activate();
+        canActivate = true;
+
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        // hasTriggered = true;
+        // Activate();
+        canActivate = false;
+
+    }  
 
     // Update is called once per frame
     void Update()
     {
+        if(canActivate)
+        {
+            if(Input.GetKeyDown("f"))
+            {
+                hasTriggered = true;
+                Activate();
+            }
+        }
+
+
         if(isRewindable){
             if(Input.GetKeyDown("e"))
             {
@@ -52,8 +74,8 @@ public class Lever : MonoBehaviour
     {
             for(int i = 0; i < doors.Length; i++)
             {
-                doors[i].SetActive(isOpened[i]);
-                isOpened[i] = !isOpened[i];
+                doors[i].SetActive(!doors[i].activeSelf);
+                // isOpened[i] = !isOpened[i];
                 
             }
 
