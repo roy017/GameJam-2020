@@ -63,15 +63,7 @@ public class Char_swap : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R))// for the real game
         {
-            /*
-            if (Player_Select == 1)
-            {
-                Player_Select = 3;
-                Player_Large.transform.position = Player_Pos;
-                Player_Large.transform.rotation = Player_Rot;
-                PM_Script_L.cur_jumps = 2;
-            }
-            */
+
             if (Player_Select == 2)
             {
                 Player_Select = 1;
