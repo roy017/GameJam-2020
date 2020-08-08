@@ -279,6 +279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doors:
   - {fileID: 42696239}
+  isRewindable: 1
 --- !u!61 &124515887
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using Cinemachine;
 
@@ -69,15 +70,16 @@ public class Manager_script : MonoBehaviour
     {
         if(spawned == false)
         {
-            spawned = true;
-            player_Dead = false;
-            GameObject p1 = Instantiate(player, this.transform.GetChild(0).position, player.transform.rotation);
-            p1.name = player.name;
-            player_pos = GameObject.Find("Camera_pos");
-            followCam.Follow = player_pos.transform;
+            // spawned = true;
+            // player_Dead = false;
+            // GameObject p1 = Instantiate(player, this.transform.GetChild(0).position, player.transform.rotation);
+            // p1.name = player.name;
+            // player_pos = GameObject.Find("Camera_pos");
+            // followCam.Follow = player_pos.transform;
 
-            Item_destroyer();
-            Item_placer();
+            // Item_destroyer();
+            // Item_placer();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
         
