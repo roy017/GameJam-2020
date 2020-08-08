@@ -7,6 +7,12 @@ public class MainMenuController : MonoBehaviour
 {
     public GameObject mainMenu;
     public GameObject optionsMenu;
+
+    void Awake()
+    {
+        mainMenu.SetActive(true);
+        optionsMenu.SetActive(false);
+    }
  
  
     public void playGame() {
