@@ -158,6 +158,8 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 768
+  cur_jumps: 0
+  Smoke: {fileID: 0}
 --- !u!50 &3639899046612015381
 Rigidbody2D:
   serializedVersion: 4
@@ -186,7 +188,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3639899046612015375}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
