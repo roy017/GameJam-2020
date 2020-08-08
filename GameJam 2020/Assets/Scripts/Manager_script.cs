@@ -65,6 +65,10 @@ public class Manager_script : MonoBehaviour
             spawned = false;
         }
 
+        if(Input.GetKeyDown(KeyCode.Tab)){
+            Reset();
+        }
+
     }
     private void FixedUpdate()
     {
@@ -79,11 +83,17 @@ public class Manager_script : MonoBehaviour
 
             // Item_destroyer();
             // Item_placer();
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Reset();
         }
 
         
     }
+    private void Reset()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
     void Item_destroyer()
     {
         for (int i = 0; i < items1.Length; i++)

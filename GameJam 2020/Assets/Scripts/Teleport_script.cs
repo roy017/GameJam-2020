@@ -18,18 +18,18 @@ public class Teleport_script : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // Debug.Log("Teleport!");
-        // CS.Player_Small.transform.position = this.transform.GetChild(0).position;
-        // CS.Player_Medium.transform.position = this.transform.GetChild(0).position;
-        // CS.Player_Large.transform.position = this.transform.GetChild(0).position;
-        Debug.Log("enter");
+        CS.Player_Small.transform.position = this.transform.GetChild(0).position;
+        CS.Player_Medium.transform.position = this.transform.GetChild(0).position;
+        CS.Player_Large.transform.position = this.transform.GetChild(0).position;
+        //Debug.Log("enter");
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         // Debug.Log("Teleport!");
-        // CS.Player_Small.transform.position = this.transform.GetChild(0).position;
-        // CS.Player_Medium.transform.position = this.transform.GetChild(0).position;
-        // CS.Player_Large.transform.position = this.transform.GetChild(0).position;
-        Debug.Log("Exti");
+        CS.Player_Small.transform.position = this.transform.GetChild(0).position;
+        CS.Player_Medium.transform.position = this.transform.GetChild(0).position;
+        CS.Player_Large.transform.position = this.transform.GetChild(0).position;
+        //Debug.Log("Exti");
     }
 }

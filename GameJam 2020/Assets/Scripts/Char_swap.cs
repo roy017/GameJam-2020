@@ -30,6 +30,7 @@ public class Char_swap : MonoBehaviour
     void Update()
     {
         //Camera_pos.transform.position = Player_Pos;
+        /*
         if(Input.GetKeyDown(KeyCode.T))// for testing;
         {
             if (Player_Select == 1)
@@ -60,7 +61,7 @@ public class Char_swap : MonoBehaviour
             }
 
         }
-
+        */
         if (Input.GetKeyDown(KeyCode.R))// for the real game
         {
 
