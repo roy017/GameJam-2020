@@ -4,21 +4,29 @@ using UnityEngine;
 
 public class Lever : MonoBehaviour
 {
-    private bool isOpened;
+    private bool[] isOpened;
     public GameObject[] doors;
 
     private bool hasTriggered = false;
 
     public bool isRewindable;
 
+    public Sprite Left;
+    public Sprite Right;
+    private Sprite Sprite_cur;
+
     // Start is called before the first frame update
     void Start()
     {
+        isOpened = new bool[doors.Length];
         for(int i = 0; i < doors.Length; i++)
         {
-            isOpened = !doors[i].GetComponent<Door>().initialState;
-            doors[i].SetActive(!isOpened);
+            isOpened[i] = !doors[i].GetComponent<Door>().initialState;
+            doors[i].SetActive(!isOpened[i]);
+            Debug.Log(isOpened[i]);
         }
+        Sprite_cur = Left;
+        this.GetComponent<SpriteRenderer>().sprite = Sprite_cur;
     }
     
     private void OnTriggerEnter2D(Collider2D collision)
@@ -44,9 +52,17 @@ public class Lever : MonoBehaviour
     {
             for(int i = 0; i < doors.Length; i++)
             {
-                doors[i].SetActive(isOpened);
+                doors[i].SetActive(isOpened[i]);
+                isOpened[i] = !isOpened[i];
+                
             }
 
-            isOpened = !isOpened;
+            if(Sprite_cur == Left)
+                Sprite_cur = Right;
+            else
+                Sprite_cur = Left;
+
+            this.GetComponent<SpriteRenderer>().sprite = Sprite_cur;
+
     }
 }
