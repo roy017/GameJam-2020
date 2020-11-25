@@ -3,6 +3,8 @@
 A small platformer and puzzle game made for a short GameJam.
 The theme of the jam was rewind.
 
+The game was created with Unity.
+
 Controls:
 WASD for movement, 
 spacebar to jump, 
