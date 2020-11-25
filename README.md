@@ -2,6 +2,7 @@
 
 A small platformer and puzzle game made for a short GameJam.
 The theme of the jam was rewind.
+
 Controls:
 WASD for movement, 
 spacebar to jump, 
